@@ -1,0 +1,11 @@
+Package: SharedLibrariesExample
+Type: Package
+Title: Example using shared libraries and Cmake with Rcpp.
+Version: 0.1
+Date: 2016-05-30
+Author: Ryan Giordano
+Maintainer: Ryan Giordano; <rgiordano@berkeley.edu>
+Description: Demonstrate the use of shared libraries and Cmake with Rcpp.
+License: GPL (>= 2)
+Imports: Rcpp (>= 0.12.5)
+LinkingTo: Rcpp

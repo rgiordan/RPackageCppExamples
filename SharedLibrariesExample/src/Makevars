@@ -1,0 +1,10 @@
+## -*- mode: makefile; -*-
+
+## For now include hard coded local directories.  TODO: autogenerate this.
+PKG_CXXFLAGS=\
+-I /home/rgiordan/Documents/git_repos/RPackageCppExamples/include
+
+PKG_LIBS=-lRPkgTestSharedLibrary
+
+PKG_CPPFLAGS=-fPIC
+CXX_STD = CXX11

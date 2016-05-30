@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/shared_function.h
+
+/home/rgiordan/Documents/git_repos/RPackageCppExamples/src/shared_function.cpp
+iostream
+-
+shared_function.h
+-
+

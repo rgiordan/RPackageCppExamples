@@ -1,0 +1,3 @@
+useDynLib(SharedLibrariesExample)
+exportPattern("^[[:alpha:]]+")
+importFrom(Rcpp, evalCpp)
