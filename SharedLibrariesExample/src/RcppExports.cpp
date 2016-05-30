@@ -27,3 +27,25 @@ BEGIN_RCPP
     return __result;
 END_RCPP
 }
+// RunSharedIntTemplateFunction
+double RunSharedIntTemplateFunction(int x);
+RcppExport SEXP SharedLibrariesExample_RunSharedIntTemplateFunction(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    Rcpp::traits::input_parameter< int >::type x(xSEXP);
+    __result = Rcpp::wrap(RunSharedIntTemplateFunction(x));
+    return __result;
+END_RCPP
+}
+// RunSharedDoubleTemplateFunction
+double RunSharedDoubleTemplateFunction(double x);
+RcppExport SEXP SharedLibrariesExample_RunSharedDoubleTemplateFunction(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    Rcpp::traits::input_parameter< double >::type x(xSEXP);
+    __result = Rcpp::wrap(RunSharedDoubleTemplateFunction(x));
+    return __result;
+END_RCPP
+}

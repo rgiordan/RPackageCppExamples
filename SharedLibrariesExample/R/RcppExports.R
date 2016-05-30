@@ -9,3 +9,11 @@ RunSharedTemplateFunction <- function(x) {
     .Call('SharedLibrariesExample_RunSharedTemplateFunction', PACKAGE = 'SharedLibrariesExample', x)
 }
 
+RunSharedIntTemplateFunction <- function(x) {
+    .Call('SharedLibrariesExample_RunSharedIntTemplateFunction', PACKAGE = 'SharedLibrariesExample', x)
+}
+
+RunSharedDoubleTemplateFunction <- function(x) {
+    .Call('SharedLibrariesExample_RunSharedDoubleTemplateFunction', PACKAGE = 'SharedLibrariesExample', x)
+}
+
