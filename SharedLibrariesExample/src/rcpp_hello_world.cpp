@@ -40,3 +40,33 @@ double RunSharedDoubleTemplateFunction(double x) {
   Rcpp::Rcout << "Now I'm in R double template function.\n";
   return TemplateFunctionInHeader(x);
 };
+
+
+// [[Rcpp::export]]
+double RunSharedFunctor(double x) {
+  Rcpp::Rcout << "Now I'm in R double functor function.\n";
+  TemplateFunctor func(x);
+  int y = 3;
+  Rcpp::Rcout << func(y);
+
+  // This will fail.
+  // Note that TemplateFunctionForStruct<int> was not instantiated even
+  // though it had to be compiled in order to use the TemplateFunctor operator.
+  // int z = TemplateFunctionForStruct(y);
+
+  // This will fail because the functor's operator hasn't been instantiated
+  // for double types.
+  // double z = 3.2;
+  // Rcpp::Rcout << func(z);
+
+  return 0;
+};
+
+
+// [[Rcpp::export]]
+double RunSharedTemplateClass(double x) {
+  Rcpp::Rcout << "Now I'm in R double class function.\n";
+  TemplateClass<double> temp_class(x);
+  double y = 3;
+  return temp_class.Multiply(y);
+}

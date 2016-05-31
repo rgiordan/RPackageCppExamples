@@ -17,5 +17,21 @@ template <typename T> T TemplateFunctionInHeader(T x) {
   return 4 * x;
 };
 
+template <typename T> T TemplateFunctionForStruct(T x);
+
+struct TemplateFunctor {
+  double x;
+  TemplateFunctor(double x): x(x) {};
+  template <typename T> T operator()(T);
+};
+
+
+template <class T> class TemplateClass {
+public:
+  T x;
+  T Multiply(T);
+  TemplateClass(T);
+  TemplateClass();
+};
 
 # endif

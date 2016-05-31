@@ -17,3 +17,11 @@ RunSharedDoubleTemplateFunction <- function(x) {
     .Call('SharedLibrariesExample_RunSharedDoubleTemplateFunction', PACKAGE = 'SharedLibrariesExample', x)
 }
 
+RunSharedFunctor <- function(x) {
+    .Call('SharedLibrariesExample_RunSharedFunctor', PACKAGE = 'SharedLibrariesExample', x)
+}
+
+RunSharedTemplateClass <- function(x) {
+    .Call('SharedLibrariesExample_RunSharedTemplateClass', PACKAGE = 'SharedLibrariesExample', x)
+}
+

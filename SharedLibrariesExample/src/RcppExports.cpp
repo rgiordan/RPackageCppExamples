@@ -49,3 +49,25 @@ BEGIN_RCPP
     return __result;
 END_RCPP
 }
+// RunSharedFunctor
+double RunSharedFunctor(double x);
+RcppExport SEXP SharedLibrariesExample_RunSharedFunctor(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    Rcpp::traits::input_parameter< double >::type x(xSEXP);
+    __result = Rcpp::wrap(RunSharedFunctor(x));
+    return __result;
+END_RCPP
+}
+// RunSharedTemplateClass
+double RunSharedTemplateClass(double x);
+RcppExport SEXP SharedLibrariesExample_RunSharedTemplateClass(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject __result;
+    Rcpp::RNGScope __rngScope;
+    Rcpp::traits::input_parameter< double >::type x(xSEXP);
+    __result = Rcpp::wrap(RunSharedTemplateClass(x));
+    return __result;
+END_RCPP
+}
